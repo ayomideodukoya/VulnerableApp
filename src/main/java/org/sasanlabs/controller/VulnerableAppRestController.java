@@ -102,7 +102,7 @@ public class VulnerableAppRestController {
      * @throws UnknownHostException
      */
     @GetMapping
-    @RequestMapping("/scanner/metadata")
+    @RequestMapping("/scanner/metadata", method = RequestMethod.POST)
     public ScannerMetaResponseBean getScannerRelatedMetaInformation() {
         return new ScannerMetaResponseBean(
                 Arrays.asList(VulnerabilityType.values()),
